@@ -1,0 +1,18 @@
+﻿@model ogsys.CRM.Models.Customer
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Notes for: @Model.Lastname, @Model.Firstname </h2>
+
+
+@Html.Partial("_Notes", Model.Notes)
+
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { customerId = Model.Id })
+    |
+    @Html.ActionLink("Back to List", "Index", "Customers",null,null)
+</p>
+
